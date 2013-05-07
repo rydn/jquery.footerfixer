@@ -1,51 +1,32 @@
 /*!
- * jQuery lightweight plugin boilerplate
- * Original author: @ajpiano
- * Further changes, comments: @addyosmani
- * Licensed under the MIT license
+ * jquery.footerFixer.js
+ * 
+ * Footer Fixer jQuery plugin, Keep it down!
+ * 
+ * Author: @ryandick [http://www.bitbucket.org/ryandick]
+ * Released under the MIT Licence
  */
-
-// the semi-colon before the function invocation is a safety
-// net against concatenated scripts and/or other plugins
-// that are not closed properly.
 ;
 (function($, window, document, undefined) {
 
-    // undefined is used here as the undefined global
-    // variable in ECMAScript 3 and is mutable (i.e. it can
-    // be changed by someone else). undefined isn't really
-    // being passed in so we can ensure that its value is
-    // truly undefined. In ES5, undefined can no longer be
-    // modified.
-    // window and document are passed through as local
-    // variables rather than as globals, because this (slightly)
-    // quickens the resolution process and can be more
-    // efficiently minified (especially when both are
-    // regularly referenced in your plugin).
-    // Create the defaults once
     var pluginName = 'footerFixer',
         defaults = {
+            //  binds to onpageload
             bindToLoad: true
         };
 
     // The actual plugin constructor
-
     function Plugin(element, options) {
         this.element = element;
-
-        // jQuery has an extend method that merges the
-        // contents of two or more objects, storing the
-        // result in the first object. The first object
-        // is generally empty because we don't want to alter
-        // the default options for future instances of the plugin
+        //  options extend
         this.options = $.extend({}, defaults, options);
 
         this._defaults = defaults;
         this._name = pluginName;
-
+        //  plugin init
         this.init();
     }
-
+    //  public properties
     Plugin.prototype = {
 
         init: function() {
@@ -92,3 +73,33 @@
     }
 
 })(jQuery, window, document);
+// Copyright (2013) Ryan Dick (“Author”) and Contributors
+
+// All rights reserved.
+
+// The “Free as in Hugs” License
+
+// Redistribution and use in source and binary forms, with or without modification,
+// are permitted provided that the following conditions are met:
+
+// Redistributions of source code must retain the above copyright notice, this list
+// of conditions and the following disclaimer.
+
+// Redistributions in binary form must reproduce the above copyright notice, this
+// list of conditions and the following disclaimer in the documentation and/or
+// other materials provided with the distribution.
+
+// Users of this software are permitted to offer to hug the Author or Contributors,
+// free of charge or obligation.
+
+// THIS SOFTWARE AND ANY HUGS ARE PROVIDED BY THE AUTHOR AND CONTRIBUTORS “AS IS”
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+// DISCLAIMED. IN NO EVENT SHALL ANYONE BE HELD LIABLE FOR ACTUAL HUGS. IN NO EVENT
+// SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+// PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+// LONELINESS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+// LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+// OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+// ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. DON’T BE CREEPY.
