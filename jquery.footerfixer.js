@@ -1,4 +1,4 @@
-/*!
+/*
  * jquery.footerFixer.js
  * 
  * Footer Fixer jQuery plugin, Keep it down!
